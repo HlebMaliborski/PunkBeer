@@ -42,6 +42,7 @@ object Dependencies {
   }
 
   fun DependencyHandlerScope.commonIntegrationTest() {
+    "testImplementation"(Test.Unit.JUNIT)
     "androidTestImplementation"(Test.Integration.JUNIT)
     "androidTestImplementation"(Test.Integration.ESPRESSO_CORE)
   }
