@@ -1,0 +1,24 @@
+name: build and test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up JDK
+        uses: actions/setup-java@v1.4.3
+        with:
+          java-version: 1.8
+      - name: build
+        run: ./gradlew build
+      - name: lint
+        run: ./gradlew lint ktlintCheck
+      - name: Danger
+        uses: danger/kotlin@1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.DANGER_TOKEN }}
