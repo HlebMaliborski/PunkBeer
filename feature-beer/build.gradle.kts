@@ -1,9 +1,14 @@
+import Dependencies.koin
+import Dependencies.retrofit
+
 plugins {
   id(Plugins.COMMON)
   id("kotlin-android")
 }
 
 dependencies {
+  implementation(project(":base"))
+
   implementation(Dependencies.AndroidX.APPCOMPAT)
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.AndroidX.VIEW_MODEL)
@@ -12,6 +17,9 @@ dependencies {
   implementation(Dependencies.Compose.COMPOSE_MATERIAL)
   implementation(Dependencies.Compose.COMPOSE_TOOLING)
   implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
+
+  koin()
+  retrofit()
 
   androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)
   debugImplementation(Dependencies.Test.Integration.COMPOSE_TOOLING)

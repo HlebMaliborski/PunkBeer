@@ -20,6 +20,13 @@ object Dependencies {
     const val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.AndroidX.KTX}"
   }
 
+  object Retrofit {
+    const val CORE = "com.squareup.retrofit2:retrofit:2.7.2"
+    const val GSON = "com.squareup.retrofit2:converter-gson:2.7.2"
+    const val OKHTTP = "com.squareup.okhttp3:okhttp:4.9.0"
+    const val INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
+  }
+
   object Compose {
     const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.Compose.CORE}"
     const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.Compose.CORE}"
@@ -48,6 +55,13 @@ object Dependencies {
     "implementation"(Koin.CORE)
     "implementation"(Koin.ANDROID)
     "implementation"(Koin.COMPOSE)
+  }
+
+  fun DependencyHandlerScope.retrofit() {
+    "implementation"(Retrofit.CORE)
+    "implementation"(Retrofit.GSON)
+    "implementation"(Retrofit.OKHTTP)
+    "implementation"(Retrofit.INTERCEPTOR)
   }
 
   fun DependencyHandlerScope.common() {
