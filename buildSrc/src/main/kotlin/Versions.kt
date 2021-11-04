@@ -14,7 +14,7 @@ object Versions {
   object AndroidX {
     const val CORE = "1.7.0"
     const val APPCOMPAT = "1.3.1"
-    const val LIFECYCLE = "2.4.0"
+    const val KTX = "2.4.0"
   }
 
   object Compose {
@@ -29,7 +29,7 @@ object Versions {
   }
 
   const val GRADLE = "7.0.3"
-
   const val KOTLIN = "1.5.31"
+  const val KOIN = "3.1.3"
 
 }

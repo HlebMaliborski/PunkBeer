@@ -1,8 +1,9 @@
 import Dependencies.common
+import Dependencies.koin
 import Dependencies.commonIntegrationTest
 
 plugins {
-  id("com.android.application")
+  id("com.android.library")
   kotlin("android")
 }
 
@@ -37,6 +38,7 @@ android {
 }
 
 dependencies {
+  koin()
   common()
   commonIntegrationTest()
 }

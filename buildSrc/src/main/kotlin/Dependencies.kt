@@ -1,6 +1,14 @@
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 object Dependencies {
+
+  object Koin {
+    const val CORE = "io.insert-koin:koin-android:${Versions.KOIN}"
+    const val ANDROID = "io.insert-koin:koin-android-compat:${Versions.KOIN}"
+    const val COMPOSE = "io.insert-koin:koin-androidx-compose:${Versions.KOIN}"
+  }
+
+
   object Kotlin {
     const val STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}"
   }
@@ -8,8 +16,8 @@ object Dependencies {
   object AndroidX {
     const val CORE = "androidx.core:core-ktx:${Versions.AndroidX.CORE}"
     const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.AndroidX.APPCOMPAT}"
-    const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.LIFECYCLE}"
-
+    const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.KTX}"
+    const val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.AndroidX.KTX}"
   }
 
   object Compose {
@@ -34,6 +42,12 @@ object Dependencies {
       const val COMPOSE_UI = "androidx.compose.ui:ui-test-junit4:${Versions.Compose.CORE}"
       const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling:${Versions.Compose.CORE}"
     }
+  }
+
+  fun DependencyHandlerScope.koin() {
+    "implementation"(Koin.CORE)
+    "implementation"(Koin.ANDROID)
+    "implementation"(Koin.COMPOSE)
   }
 
   fun DependencyHandlerScope.common() {

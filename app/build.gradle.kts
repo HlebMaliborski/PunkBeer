@@ -1,8 +1,42 @@
 plugins {
-  id(Plugins.COMMON)
+  id(Plugins.ANDROID_APPLICATION)
+  kotlin(Plugins.KOTLIN_ANDROID)
+}
+
+android {
+  compileSdk = Versions.App.COMPILE_SDK
+
+  defaultConfig {
+    minSdk = Versions.App.MIN_SDK
+    targetSdk = Versions.App.TARGET_SDK
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+  }
+
+  kotlinOptions {
+    jvmTarget = "1.8"
+  }
+  buildFeatures {
+    compose = true
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion = Versions.Compose.CORE
+  }
+  packagingOptions {
+    resources {
+      excludes += "/META-INF/{AL2.0,LGPL2.1}"
+    }
+  }
 }
 
 dependencies {
+  implementation(project(":base"))
+  implementation(project(":feature-beer"))
+
   implementation(Dependencies.AndroidX.APPCOMPAT)
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.Google.MATERIAL)
