@@ -1,3 +1,4 @@
+/* ktlint-disable no-wildcard-imports */
 import systems.danger.kotlin.*
 
 danger(args) {
