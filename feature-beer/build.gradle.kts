@@ -1,3 +1,4 @@
+import Dependencies.compose
 import Dependencies.koin
 import Dependencies.retrofit
 
@@ -13,14 +14,11 @@ dependencies {
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.AndroidX.VIEW_MODEL)
   implementation(Dependencies.Google.MATERIAL)
-  implementation(Dependencies.Compose.COMPOSE_UI)
-  implementation(Dependencies.Compose.COMPOSE_MATERIAL)
-  implementation(Dependencies.Compose.COMPOSE_TOOLING)
-  implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
 
   koin()
   retrofit()
-
+  compose()
+  implementation("io.coil-kt:coil-compose:1.4.0")
   androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)
   debugImplementation(Dependencies.Test.Integration.COMPOSE_TOOLING)
 }

@@ -8,7 +8,6 @@ object Dependencies {
     const val COMPOSE = "io.insert-koin:koin-androidx-compose:${Versions.KOIN}"
   }
 
-
   object Kotlin {
     const val STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}"
   }
@@ -32,6 +31,7 @@ object Dependencies {
     const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.Compose.CORE}"
     const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.CORE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.Compose.ACTIVITY}"
+    const val COMPOSE_COIL = "io.coil-kt:coil-compose:${Versions.Compose.ACTIVITY}"
   }
 
   object Google {
@@ -67,6 +67,14 @@ object Dependencies {
   fun DependencyHandlerScope.common() {
     "implementation"(Kotlin.STDLIB)
     "implementation"(AndroidX.CORE)
+  }
+
+  fun DependencyHandlerScope.compose() {
+    "implementation"(Compose.COMPOSE_ACTIVITY)
+    "implementation"(Compose.COMPOSE_TOOLING)
+    "implementation"(Compose.COMPOSE_MATERIAL)
+    "implementation"(Compose.COMPOSE_UI)
+    "implementation"(Compose.COMPOSE_COIL)
   }
 
   fun DependencyHandlerScope.commonIntegrationTest() {

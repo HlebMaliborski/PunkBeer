@@ -1,3 +1,5 @@
+import Dependencies.koin
+
 plugins {
   id(Plugins.ANDROID_APPLICATION)
   kotlin(Plugins.KOTLIN_ANDROID)
@@ -45,6 +47,7 @@ dependencies {
   implementation(Dependencies.Compose.COMPOSE_TOOLING)
   implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
 
+  koin()
   androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)
   debugImplementation(Dependencies.Test.Integration.COMPOSE_TOOLING)
 }
