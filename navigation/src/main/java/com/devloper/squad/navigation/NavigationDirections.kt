@@ -7,14 +7,6 @@ import androidx.navigation.navArgument
 
 object BeerNavigation {
 
-  val default = object : NavigationCommand {
-
-    override val arguments = emptyList<NamedNavArgument>()
-
-    override val destination = ""
-
-  }
-
   val beers = object : NavigationCommand {
 
     override val arguments = emptyList<NamedNavArgument>()

@@ -5,7 +5,7 @@ import com.devloper.squad.feature_beer.data.model.Beer
 import com.devloper.squad.feature_beer.domain.model.BeerDomain
 import com.devloper.squad.feature_beer.domain.model.BeerItemDomain
 
-class BeerMapperImpl : BeerMapper {
+class BeersMapperImpl : BeersMapper {
   override fun map(input: Beer): BeerDomain {
     val beerDomain = BeerDomain()
     input.forEach { beerItem ->
@@ -23,4 +23,4 @@ class BeerMapperImpl : BeerMapper {
   }
 }
 
-interface BeerMapper : Mapper<Beer, BeerDomain>
+interface BeersMapper : Mapper<Beer, BeerDomain>

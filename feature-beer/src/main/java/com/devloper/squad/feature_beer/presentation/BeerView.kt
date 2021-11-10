@@ -1,5 +1,6 @@
 package com.devloper.squad.feature_beer.presentation
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -26,7 +27,9 @@ fun BeerList(
   val beerDomain = viewModel.beers.value.beerDomain.toList()
   LazyColumn {
     items(beerDomain.size) { index ->
-      BeerCard(beerItem = beerDomain[index])
+      BeerCard(beerItem = beerDomain[index]) { id ->
+        viewModel.onEvent(BeerViewModel.Event.OnNavigate(id))
+      }
     }
   }
 }
@@ -34,17 +37,17 @@ fun BeerList(
 @Preview
 @Composable
 fun BeerCard(
-  @PreviewParameter(
-    BeerItemDomainPreviewParameterProvider::class
-  ) beerItem: BeerItemDomain,
-  viewModel: BeerViewModel = getViewModel()
+  @PreviewParameter(BeerItemDomainPreviewParameterProvider::class) beerItem: BeerItemDomain,
+  onItemClick: (id: Int) -> Unit = { it ->
+    Log.d("Ura", "$it")
+  }
 ) {
   Row(
     verticalAlignment = Alignment.CenterVertically,
     modifier = Modifier
       .padding(bottom = 10.dp)
       .fillMaxWidth()
-      .clickable { viewModel.onEvent(BeerViewModel.Event.OnNavigate(beerItem.id)) }
+      .clickable { onItemClick(beerItem.id) }
   ) {
     Image(
       painter = rememberImagePainter(beerItem.imageUrl),
