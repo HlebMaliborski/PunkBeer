@@ -32,6 +32,7 @@ object Dependencies {
     const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.CORE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.Compose.ACTIVITY}"
     const val COMPOSE_COIL = "io.coil-kt:coil-compose:${Versions.Compose.ACTIVITY}"
+    const val COMPOSE_NAV = "androidx.navigation:navigation-compose:${Versions.Compose.NAV}"
   }
 
   object Google {
@@ -75,6 +76,7 @@ object Dependencies {
     "implementation"(Compose.COMPOSE_MATERIAL)
     "implementation"(Compose.COMPOSE_UI)
     "implementation"(Compose.COMPOSE_COIL)
+    "implementation"(Compose.COMPOSE_NAV)
   }
 
   fun DependencyHandlerScope.commonIntegrationTest() {

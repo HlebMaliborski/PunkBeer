@@ -20,6 +20,7 @@ object Versions {
   object Compose {
     const val CORE = "1.0.4"
     const val ACTIVITY = "1.4.0"
+    const val NAV = "2.4.0-beta02"
   }
 
   object Test {

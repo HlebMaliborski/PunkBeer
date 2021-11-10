@@ -1,3 +1,4 @@
+import Dependencies.compose
 import Dependencies.koin
 
 plugins {
@@ -37,17 +38,15 @@ android {
 
 dependencies {
   implementation(project(":base"))
+  implementation(project(":navigation"))
   implementation(project(":feature-beer"))
 
   implementation(Dependencies.AndroidX.APPCOMPAT)
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.Google.MATERIAL)
-  implementation(Dependencies.Compose.COMPOSE_UI)
-  implementation(Dependencies.Compose.COMPOSE_MATERIAL)
-  implementation(Dependencies.Compose.COMPOSE_TOOLING)
-  implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
 
   koin()
+  compose()
   androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)
   debugImplementation(Dependencies.Test.Integration.COMPOSE_TOOLING)
 }

@@ -9,3 +9,4 @@ rootProject.name = "Punkbeer"
 include(":app")
 include(":feature-beer")
 include(":base")
+include(":navigation")

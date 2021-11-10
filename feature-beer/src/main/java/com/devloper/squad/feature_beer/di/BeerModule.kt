@@ -24,5 +24,5 @@ val BeerModule = module {
   single<BeerRepository> { BeerRepositoryImpl(networkDataSource = get(), beerMapper = get()) }
 
   factory { GetBeersUseCase(beerRepository = get()) }
-  viewModel { BeerViewModel(getBeers = get()) }
+  viewModel { BeerViewModel(getBeers = get(), navigationManager = get()) }
 }
