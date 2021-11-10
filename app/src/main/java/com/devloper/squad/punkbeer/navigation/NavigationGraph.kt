@@ -19,7 +19,8 @@ fun NavigationComponent(navController: NavHostController) {
       BeerList()
     }
     composable(BeerDetailNavigation.route) { backStackEntry ->
-      BeerDetailCard(backStackEntry.arguments?.getInt("id") ?: 0)
+      val identity = backStackEntry.arguments?.getString("id") ?: "0"
+      BeerDetailCard(id = identity.toInt())
     }
   }
 }
