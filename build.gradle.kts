@@ -13,6 +13,10 @@ buildscript {
   }
 }
 
+plugins {
+  id("org.jlleitschuh.gradle.ktlint") version Versions.KTLINT
+}
+
 tasks.register("clean", Delete::class) {
   delete(rootProject.buildDir)
 }
