@@ -29,7 +29,7 @@ object Versions {
     const val ESPRESSO = "3.4.0"
   }
 
-  const val GRADLE = "7.0.3"
+  const val GRADLE = "7.2.2"
   const val KOTLIN = "1.5.31"
   const val KOIN = "3.1.3"
 

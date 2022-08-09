@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.devloper.squad.feature_beer.domain.model.BeerDomain
 import com.devloper.squad.feature_beer.domain.usecase.GetBeerUseCase
+import com.dynatrace.android.agent.Dynatrace
 import kotlinx.coroutines.launch
 
 class BeerDetailViewModel(private val getBeerUseCase: GetBeerUseCase) : ViewModel() {
@@ -16,6 +17,9 @@ class BeerDetailViewModel(private val getBeerUseCase: GetBeerUseCase) : ViewMode
   fun onEvent(event: Event) {
     when (event) {
       is Event.OnRequest -> {
+       /* val action = Dynatrace.enterAction("TestBeer")
+        action.reportValue("TestValue", 1)
+        action.leaveAction()*/
         viewModelScope.launch {
           getBeerUseCase(event.id).onSuccess { item ->
             beers.value = BeerViewState(item)

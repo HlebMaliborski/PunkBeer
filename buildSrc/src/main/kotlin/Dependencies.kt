@@ -28,6 +28,7 @@ object Dependencies {
 
   object Compose {
     const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.Compose.CORE}"
+    const val COMPOSE_UI_UTIL = "androidx.compose.ui:ui-util:${Versions.Compose.CORE}"
     const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.Compose.CORE}"
     const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.CORE}"
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.Compose.ACTIVITY}"
@@ -75,6 +76,7 @@ object Dependencies {
     "implementation"(Compose.COMPOSE_TOOLING)
     "implementation"(Compose.COMPOSE_MATERIAL)
     "implementation"(Compose.COMPOSE_UI)
+    "implementation"(Compose.COMPOSE_UI_UTIL)
     "implementation"(Compose.COMPOSE_COIL)
     "implementation"(Compose.COMPOSE_NAV)
   }
