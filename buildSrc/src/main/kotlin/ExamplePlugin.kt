@@ -55,7 +55,8 @@ abstract class ExamplePlugin : Plugin<Project> {
             //return classData.className.equals("androidx.compose.foundation.ClickableKt\u0024clickable")
             //return true
             //return classData.className.contains("androidx.compose.ui.semantics.SemanticsPropertiesKt")
-            return classData.className.equals("androidx.compose.foundation.ClickableKt")
+            //return classData.className.equals("androidx.compose.foundation.ClickableKt")
+            return classData.className == "androidx.compose.foundation.selection.ToggleableKt"
         }
     }
 }

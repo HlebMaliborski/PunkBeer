@@ -1,7 +1,6 @@
 import org.objectweb.asm.ClassVisitor
 import org.objectweb.asm.FieldVisitor
 import org.objectweb.asm.MethodVisitor
-import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Opcodes.ASM9
 import org.slf4j.LoggerFactory
 
@@ -33,6 +32,7 @@ class AddFieldAdapter(
         nameA = name
         super.visit(version, access, name, signature, superName, interfaces)
     }
+
     override fun visitField(
         access: Int, name: String, desc: String?,
         signature: String?, value: Any?
@@ -42,7 +42,8 @@ class AddFieldAdapter(
         }
         return cv.visitField(access, name, desc, signature, value)
     }
-var aa= false
+
+    var aa = false
     override fun visitMethod(
         access: Int,
         name: String?,
@@ -53,9 +54,11 @@ var aa= false
         val logger1 = LoggerFactory.getLogger("DynatraceTransformer123")
         logger1.debug("Jopa Kona {}   {}", name, nameA)
         val a = super.visitMethod(access, name, descriptor, signature, exceptions)
-        java.lang.System.out.println("Jopa Kona" + name)
+        System.out.println("Jopa Kona" + name)
 
-        return if (a != null && name?.endsWith("clickable-O2vRcR0") == true /*&& nameA?.endsWith("semantics") == true*/) {
+        return if (a != null && name?.endsWith("toggleableImpl-3WzHGRc") == true) {
+            ToggleableAdapter(a)
+        } else if (a != null && name?.endsWith("clickable-O2vRcR0") == true && nameA?.endsWith("semantics") == true) {
             RemoveNopAdapter(a)
         } else {
             a

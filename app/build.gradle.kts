@@ -37,7 +37,7 @@ android {
   }
 }
 
-//apply<ExamplePlugin>()
+apply<ExamplePlugin>()
 //apply<GenerateClassPlugin>()
 
 /*project.afterEvaluate {
@@ -53,10 +53,10 @@ dependencies {
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.Google.MATERIAL)
 
-  compileOnly(fileTree(mapOf(
+/*  compileOnly(fileTree(mapOf(
     "dir" to "/Users/gleb.maliborsky/StudioProjects/PunkBeer/app/libs",
     "include" to listOf("*.aar", "*.jar"),
-  )))
+  )))*/
   koin()
   compose()
   androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)

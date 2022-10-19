@@ -10,7 +10,7 @@ dependencyResolutionManagement {
       url = URI("https://repo.cuba-platform.com/content/groups/work")
     }
     google()
-    //mavenLocal()
+    mavenLocal()
     mavenCentral()
   }
 }
