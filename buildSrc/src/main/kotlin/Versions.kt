@@ -3,8 +3,8 @@ object Versions {
     const val VERSION_CODE = 1
     const val VERSION_NAME = "1.0.0"
     const val MIN_SDK = 21
-    const val TARGET_SDK = 31
-    const val COMPILE_SDK = 31
+    const val TARGET_SDK = 33
+    const val COMPILE_SDK = 33
   }
 
   object Google {
@@ -18,7 +18,7 @@ object Versions {
   }
 
   object Compose {
-    const val CORE = "1.0.4"
+    const val CORE = "1.3.0"
     const val ACTIVITY = "1.4.0"
     const val NAV = "2.4.0-beta02"
   }
@@ -30,7 +30,7 @@ object Versions {
   }
 
   const val GRADLE = "7.2.2"
-  const val KOTLIN = "1.5.31"
+  const val KOTLIN = "1.7.10"
   const val KOIN = "3.1.3"
 
 }

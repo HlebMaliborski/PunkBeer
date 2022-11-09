@@ -13,6 +13,7 @@ dependencies {
   implementation(Dependencies.Compose.COMPOSE_MATERIAL)
   implementation(Dependencies.Compose.COMPOSE_TOOLING)
   implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
+
 /*  implementation(fileTree(mapOf(
     "dir" to "/Users/gleb.maliborsky/StudioProjects/PunkBeer/base/libs",
     "include" to listOf("*.aar", "*.jar"),

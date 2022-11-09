@@ -16,7 +16,7 @@ dependencies {
   implementation("com.android.tools.build:gradle:7.2.2")
 
   // This should be in-sync with the Kotlin version exposed by `Versions.kt`
-  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
+  implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
   implementation("org.ow2.asm:asm-util:9.3")
   implementation(kotlin("stdlib"))
   gradleApi()

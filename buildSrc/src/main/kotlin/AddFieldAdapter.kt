@@ -58,8 +58,10 @@ class AddFieldAdapter(
 
         return if (a != null && name?.endsWith("toggleableImpl-3WzHGRc") == true) {
             ToggleableAdapter(a)
-        } else if (a != null && name?.endsWith("clickable-O2vRcR0") == true && nameA?.endsWith("semantics") == true) {
+        } else if (a != null && name?.endsWith("clickable-O2vRcR0") == true) {
             RemoveNopAdapter(a)
+        } else if (a != null && name?.endsWith("swipeable-pPrIpRY") == true) {
+            SwipeableAdapter(a)
         } else {
             a
         }
