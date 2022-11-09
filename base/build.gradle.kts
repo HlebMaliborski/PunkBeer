@@ -9,6 +9,7 @@ dependencies {
   implementation(Dependencies.AndroidX.VIEW_MODEL)
   implementation(Dependencies.Google.MATERIAL)
   implementation(Dependencies.Compose.COMPOSE_UI)
+  implementation(Dependencies.Compose.COMPOSE_UI_UTIL)
   implementation(Dependencies.Compose.COMPOSE_MATERIAL)
   implementation(Dependencies.Compose.COMPOSE_TOOLING)
   implementation(Dependencies.Compose.COMPOSE_ACTIVITY)
