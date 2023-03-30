@@ -22,44 +22,44 @@ import org.koin.androidx.compose.getViewModel
 
 @Composable
 fun BeerList(
-  viewModel: BeerViewModel = getViewModel()
+    viewModel: BeerViewModel = getViewModel()
 ) {
-  val beerDomain = viewModel.beers.value.beerDomain.toList()
-  LazyColumn {
-    items(beerDomain.size) { index ->
-      BeerCard(beerItem = beerDomain[index]) { id ->
-        viewModel.onEvent(BeerViewModel.Event.OnNavigate(id))
-      }
+    val beerDomain = viewModel.beers.value.beerDomain.toList()
+    LazyColumn {
+        items(beerDomain.size) { index ->
+            BeerCard(beerItem = beerDomain[index]) { id ->
+                viewModel.onEvent(BeerViewModel.Event.OnNavigate(id))
+            }
+        }
     }
-  }
 }
 
 @Preview
 @Composable
 fun BeerCard(
-  @PreviewParameter(BeerItemDomainPreviewParameterProvider::class) beerItem: BeerItemDomain,
-  onItemClick: (id: Int) -> Unit = { it ->
-    Log.d("Ura", "$it")
-  }
+    @PreviewParameter(BeerItemDomainPreviewParameterProvider::class) beerItem: BeerItemDomain,
+    onItemClick: (id: Int) -> Unit = { item ->
+        Log.d("Ura", "$item")
+    }
 ) {
-  Row(
-    verticalAlignment = Alignment.CenterVertically,
-    modifier = Modifier
-      .padding(bottom = 10.dp)
-      .fillMaxWidth()
-      .clickable { onItemClick(beerItem.id) }
-  ) {
-    Image(
-      painter = rememberImagePainter(beerItem.imageUrl),
-      contentDescription = null,
-      modifier = Modifier.size(128.dp)
-    )
-    Text(beerItem.name)
-  }
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .padding(bottom = 10.dp)
+            .fillMaxWidth()
+            .clickable { onItemClick(beerItem.id) }
+    ) {
+        Image(
+            painter = rememberImagePainter(beerItem.imageUrl),
+            contentDescription = null,
+            modifier = Modifier.size(128.dp)
+        )
+        Text(beerItem.name)
+    }
 }
 
 class BeerItemDomainPreviewParameterProvider : PreviewParameterProvider<BeerItemDomain> {
-  override val values = sequenceOf(
-    BeerItemDomain(imageUrl = "https://www.example.com/image.jpg", name = "Ura")
-  )
+    override val values = sequenceOf(
+        BeerItemDomain(imageUrl = "https://www.example.com/image.jpg", name = "Ura")
+    )
 }
