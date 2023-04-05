@@ -27,13 +27,13 @@ object Dependencies {
   }
 
   object Compose {
-    const val COMPOSE_UI = "androidx.compose.ui:ui:${Versions.Compose.CORE}"
-    const val COMPOSE_UI_UTIL = "androidx.compose.ui:ui-util:${Versions.Compose.CORE}"
-    const val COMPOSE_MATERIAL = "androidx.compose.material:material:${Versions.Compose.CORE}"
-    const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling-preview:${Versions.Compose.CORE}"
-    const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.Compose.ACTIVITY}"
-    const val COMPOSE_COIL = "io.coil-kt:coil-compose:${Versions.Compose.ACTIVITY}"
-    const val COMPOSE_NAV = "androidx.navigation:navigation-compose:${Versions.Compose.NAV}"
+    const val COMPOSE_UI = "androidx.compose.ui:ui:1.4.0"
+    const val COMPOSE_UI_UTIL = "androidx.compose.ui:ui-util:1.4.0"
+    const val COMPOSE_MATERIAL = "androidx.compose.material:material:1.4.0"
+    const val COMPOSE_TOOLING = "androidx.compose.ui:ui-tooling-preview:1.4.0"
+    const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:1.7.0"
+    const val COMPOSE_COIL = "io.coil-kt:coil-compose:2.2.2"
+    const val COMPOSE_NAV = "androidx.navigation:navigation-compose:2.5.3"
   }
 
   object Google {

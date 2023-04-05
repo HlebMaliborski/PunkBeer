@@ -1,13 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
     }
     dependencies {
         classpath("com.android.tools.build:gradle:${Versions.GRADLE}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20")
-        classpath("com.dynatrace.tools.android:gradle-plugin:8+")
+        classpath("com.dynatrace.tools.android:gradle-plugin:8.265.0.1001")
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,6 +25,7 @@ configure<com.dynatrace.tools.android.dsl.DynatraceExtension> {
                 beaconUrl("https://bf04217tce.bf-dev.dynatracelabs.com/mbeacon")
             }
             userActions {
+                namePrivacy(false)
                 composeEnabled(true)
                 sensors {
                     click(false)

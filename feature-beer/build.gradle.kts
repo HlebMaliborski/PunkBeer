@@ -15,6 +15,7 @@ dependencies {
   implementation(Dependencies.AndroidX.LIFECYCLE)
   implementation(Dependencies.AndroidX.VIEW_MODEL)
   implementation(Dependencies.Google.MATERIAL)
+  implementation("androidx.compose.material:material:1.4.0")
 
   koin()
   retrofit()

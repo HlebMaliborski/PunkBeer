@@ -28,7 +28,7 @@ android {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = Versions.Compose.CORE
+    kotlinCompilerExtensionVersion = "1.4.0"
   }
   packagingOptions {
     resources {

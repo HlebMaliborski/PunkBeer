@@ -27,7 +27,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.Compose.CORE
+        kotlinCompilerExtensionVersion = "1.4.0"
     }
     packagingOptions {
         resources {
@@ -43,7 +43,6 @@ dependencies {
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.AndroidX.LIFECYCLE)
     implementation(Dependencies.Google.MATERIAL)
-    implementation("androidx.compose.foundation:foundation:1.3.0")
 
     koin()
     compose()
