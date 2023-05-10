@@ -27,9 +27,11 @@ fun BeerDetailCard(
     viewModel: BeerDetailViewModel = getViewModel(),
     id: Int = 0
 ) {
-    viewModel.onEvent(BeerDetailViewModel.Event.OnRequest(id))
-
-    val beerDomain = viewModel.beers.value.beerDomain.toList()
+    //viewModel.onEvent(BeerDetailViewModel.Event.OnRequest(id))
+    Button(onClick = { viewModel.onEvent(BeerDetailViewModel.Event.OnTest(id)) }) {
+        Text(text = "Order beer")
+    }
+    /*val beerDomain = viewModel.beers.value.beerDomain.toList()
     if (beerDomain.isNotEmpty()) {
         val beerItem = beerDomain[0];
 
@@ -62,9 +64,6 @@ fun BeerDetailCard(
                         }
                 )
 
-                Button(onClick = { Log.d("Beer", "Beer is ordered") }) {
-                    Text(text = "Order beer")
-                }
 
                 val checkedState = remember { mutableStateOf(true) }
                 Checkbox(
@@ -74,9 +73,8 @@ fun BeerDetailCard(
                 )
             }
         }
-    }
+    }*/
 }
-
 
 
 @Preview

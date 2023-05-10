@@ -4,6 +4,7 @@ import Dependencies.koin
 plugins {
     id(Plugins.ANDROID_APPLICATION)
     kotlin(Plugins.KOTLIN_ANDROID)
+    id("kotlin-kapt")
 }
 
 android {
@@ -43,7 +44,9 @@ dependencies {
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.AndroidX.LIFECYCLE)
     implementation(Dependencies.Google.MATERIAL)
-
+    implementation("com.squareup.moshi:moshi:1.14.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
     koin()
     compose()
     androidTestImplementation(Dependencies.Test.Integration.COMPOSE_UI)

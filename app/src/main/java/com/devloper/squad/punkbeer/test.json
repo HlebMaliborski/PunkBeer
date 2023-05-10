@@ -1,0 +1,41 @@
+{
+    "mobileAgentConfig": {
+        "maxBeaconSizeKb": 150,
+        "selfmonitoring": true,
+        "maxSessionDurationMins": 360,
+        "maxEventsPerSession": 100000,
+        "sessionTimeoutSec": 600,
+        "sendIntervalSec": 120,
+        "visitStoreVersion": 2,
+        "maxCachedCrashesCount": 10,
+        "rageTapConfig": {
+            "tapDuration": 100,
+            "dispersionRadius": 100,
+            "timespanDifference": 300,
+            "minimumNumberOfTaps": 3
+        },
+        "replayConfig": {
+            "protocolVersion": 1,
+            "selfmonitoring": 3
+        }
+    },
+    "appConfig": {
+        "capture": 1,
+        "captureLifecycle": 1,
+        "reportCrashes": 1,
+        "reportErrors": 1,
+        "trafficControlPercentage": 100,
+        "replayConfig": {
+            "capture": false,
+            "imageRetentionTimeInMinutes": 1440
+        },
+        "ipMasking": "None",
+        "applicationId": "1f6803a9-53b6-45d4-9e5e-a2ba83255453"
+    },
+    "dynamicConfig": {
+        "serverId": 4,
+        "switchServer": false,
+        "status": "OK"
+    },
+    "timestamp": 1683631162842
+}
